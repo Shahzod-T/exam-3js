@@ -11,51 +11,55 @@ function removeZeros(nums) {
 
 //  task 2
 
-const arr = [true, false, true, false, true];
-const count = arr.filter(Boolean).length;
 
-console.log(count);
+function countTrue (arry) {
+    var count=0
+    for (i=0; i<arry.length; i++){
+        if(arry[i]===true)
+        count++;
+    }
+    console.log(count);
+}
+countTrue([true,true,true,false]);
 
 // task 3
 
 
-function SummPositive( numbers ) {
-    var negatives = [];
-    var sum = 0;
-  
-    for(var i = 0; i < numbers.length; i++) {
-      if(numbers[i] < 0) {
-        negatives.push(numbers[i]);
-      }else{
-        sum += numbers[i];
-      }
+
+
+var number =[1,2,0,-1,-2,3,4]
+
+
+function array(){
+    var newArray = 0
+
+    for( var num of number ){
+        newArray += num
+       
+        
+        
     }
-  
-    console.log(negatives);
-  
-    return sum;
-  }
-  
-  var sum_result = SummPositive( [ 1, 2, 3, 4, 5, -2, 23, -1, -13, 10,-52 ] );
-  
-  console.log(sum_result);
+
+    return newArray
+}
+
+console.log(array(number));
 
 
 //   task 4
 
-var myArray = [
-    {"ID": 1, "Price": 200},
-    {"ID": 2, "Price": 1000},
-    {"ID": 3, "CPriceost": 50},
-    {"ID": 4, "Price": 500}
+var apr = [
+    {name: "Ali", price: 200},
+    {name: "Umid", price: 800},
+    {name: "Sardor", price: 400},
 ]
-
-var lowest = Number.POSITIVE_INFINITY;
-var highest = Number.NEGATIVE_INFINITY;
-var tmp;
-for (var i=myArray.length-1; i>=0; i--) {
-    tmp = myArray[i].Cost;
-    if (tmp < lowest) lowest = tmp;
-    if (tmp > highest) highest = tmp;
-}
-console.log(highest, lowest);
+ function addMax() {
+   var max = 0
+     for (var item in apr) {
+       if (apr[item].price > apr[max].price) {
+         max = item
+         }
+       }
+   console.log(apr[max].name)
+ }
+ addMax(apr)
